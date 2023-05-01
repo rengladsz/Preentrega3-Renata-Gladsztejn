@@ -1,61 +1,71 @@
+$color1:rgb(226, 216, 246);
+$color2: rgb(239, 138, 101);
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  
-  @font-face {
+}
+
+@font-face {
     font-family: Abstract;
     src: url(./fonts/aAbstractGroovy.ttf);
-  }
-  @font-face {
+}
+
+@font-face {
     font-family: SourceSans;
     src: url(./fonts/SourceSansPro-Light.ttf);
-  }
-  .navbar {
-    background-color: rgb(226, 216, 246);
+}
+
+.navbar {
+    background-color: $color1;
     width: 100%;
-  }
-  
-  .navbar-brand {
-    font-family: Abstract;
-    font-size: 40px;
-    color: rgb(238, 146, 80) !important;
-  }
-  
-  .nav-link {
-    font-family: SourceSans;
-    font-size: 20px;
-    font-weight: bold;
-  }
-  
-  /* slideshow */
-  .slide img {
-    -o-object-fit: cover;
-       object-fit: cover;
-    width: 100%;
-    height: 400px !important;
-    margin-top: 30px;
-  }
-  
-  .slide {
+
+
+    .navbar-brand {
+        font-family: Abstract;
+        font-size: 40px;
+        color: $color2 !important;
+    }
+
+    .nav-link {
+        font-family: SourceSans;
+        font-size: 20px;
+        font-weight: bold;
+    }
+}
+
+/* slideshow */
+
+
+.slide {
     width: 100vh;
     margin: 0;
     margin-bottom: 30px;
-  }
-  
-  /* footer */
-  html {
+
+
+    .slide img {
+        -o-object-fit: cover;
+        object-fit: cover;
+        width: 100%;
+        height: 400px !important;
+        margin-top: 30px;
+    }
+
+}
+
+/* footer */
+html {
     min-height: 100%;
     position: relative;
-  }
-  
-  body {
+}
+
+body {
     margin: 0;
     margin-bottom: 130px;
-  }
-  
-  .footer {
+}
+
+.footer {
     bottom: 0;
     width: 100%;
     background-image: linear-gradient(to right top, #e2d8f6, #f2cfe9, #fcc8d4, #fdc5bc, #f2c6a6);
@@ -67,294 +77,304 @@
     height: 120px;
     position: absolute;
     margin-top: 20px;
-  }
-  
-  /* .footer {
-  
-      background-image: linear-gradient(to right top, #e2d8f6, #f2cfe9, #fcc8d4, #fdc5bc, #f2c6a6);
-      color: white;
-      text-align: center;
-      font-size: 20px;
-      padding: 10px;
-      font-family: SourceSans;
-      list-style: none;
-      text-transform: capitalize;
-      color: black;
-  
-  } */
-  @media only screen and (min-width: 480px) and (max-width: 768) {
+}
+
+
+@media only screen and (min-width: 480px) and (max-width: 768) {
     .footer {
-      text-align: center;
-      width: 100%;
-      margin: auto;
-      font-size: 25px;
-      margin-top: 50px;
+        text-align: center;
+        width: 100%;
+        margin: auto;
+        font-size: 25px;
+        margin-top: 50px;
     }
-  }
-  .productos {
+}
+
+.productos {
     height: auto;
     width: 97%;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 200px 50px 200px 50px 200px 50px 200px 50px 200px 50px 200px 50px 200px 50px 200px 50px 200px 50px;
-    grid-template-areas: "img1" "texto1" "img2" "texto2" "img3" "texto3" "img4" "texto4" "img5" "texto5" "img6" "texto6" "img7" "texto7" "img8" "texto8" "img9" "texto9";
+    grid-template-areas: "img1""texto1""img2""texto2""img3""texto3""img4""texto4""img5""texto5""img6""texto6""img7""texto7""img8""texto8""img9""texto9";
     grid-gap: 10px;
     padding: 20px;
     margin-bottom: 20px;
-  }
-  
-  .img {
+}
+
+.img {
     height: 200px;
-  }
-  
-  .texto {
+
+    &:hover {
+        transform: scale(1.09);
+        transition: all 0.9s;
+    }
+}
+
+.texto {
     height: 60px;
     font-size: 16px;
-  }
-  
-  .img:hover {
-    transform: scale(1.09);
-    transition: all 0.9s;
-  }
-  
-  .img1 {
+}
+
+
+
+.img1 {
     grid-area: img1;
     background-image: url(img/cenicero1.JPG);
     background-size: cover;
     background-position: center;
     height: 200px;
-  }
-  
-  .texto1 {
+}
+
+.texto1 {
     grid-area: texto1;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
     height: 60px;
     font-size: 16px;
-  }
-  
-  .img2 {
+}
+
+.img2 {
     grid-area: img2;
     background-image: url(img/cenicero2.JPG);
-   @extend .img1;
-  }
-  
-  .texto2 {
+    @extend .img1;
+}
+
+.texto2 {
     grid-area: texto2;
     @extend .texto1;
     // font-family: Verdana, Geneva, Tahoma, sans-serif;
     // text-align: center;
     // height: 60px;
     // font-size: 16px;
-  }
-  
-  .img3 {
+}
+
+.img3 {
     grid-area: img3;
     background-image: url(img/cenicero3.jpeg);
     @extend .img1;
-  }
-  
-  .texto3 {
+}
+
+.texto3 {
     grid-area: texto3;
     @extend .texto1;
-  }
-  
-  .img4 {
+}
+
+.img4 {
     grid-area: img4;
     background-image: url(img/cenicero4.jpeg);
     @extend .img1;
-  }
-  
-  .texto4 {
+}
+
+.texto4 {
     grid-area: texto4;
     @extend .texto1;
-  }
-  
-  .img5 {
+}
+
+.img5 {
     grid-area: img5;
     background-image: url(img/combo.JPG);
     @extend .img1;
-  }
-  
-  .texto5 {
+}
+
+.texto5 {
     grid-area: texto5;
     @extend .texto1;
-  }
-  
-  .img6 {
+}
+
+.img6 {
     grid-area: img6;
     background-image: url(img/cuenco.JPG);
     @extend .img1;
-  }
-  
-  .texto6 {
+}
+
+.texto6 {
     grid-area: texto6;
     @extend .texto1;
-  }
-  
-  .img7 {
+}
+
+.img7 {
     grid-area: img7;
     background-image: url(img/pipas1.JPG);
     @extend .img1;
-  }
-  
-  .texto7 {
+}
+
+.texto7 {
     grid-area: texto7;
     @extend .texto1;
-  }
-  
-  .img8 {
+}
+
+.img8 {
     grid-area: img8;
     background-image: url(img/pipas2.JPG);
     @extend .img1;
-  }
-  
-  .texto8 {
+}
+
+.texto8 {
     grid-area: texto8;
     @extend .texto1;
-  }
-  
-  .img9 {
+}
+
+.img9 {
     grid-area: img9;
     background-image: url(img/pipas3.JPG);
     @extend .img1;
-  }
-  
-  .texto9 {
+}
+
+.texto9 {
     grid-area: texto9;
     @extend .texto1;
-  }
-  
-  @media only screen and (min-width: 768px) {
+}
+
+@media only screen and (min-width: 768px) {
     .productos {
-      height: 800px;
-      width: 97%;
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-template-rows: 300px 20px 300px 20px 300px 20px;
-      grid-template-areas: "img1 img2 img3" "texto1 texto2 texto3" "img4 img5 img6" "texto4 texto5 texto6" "img7 img8 img9" "texto7 texto8 texto9";
-      grid-gap: 20px;
-      padding: 20px;
-      margin-bottom: 20px;
+        height: 800px;
+        width: 97%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 300px 20px 300px 20px 300px 20px;
+        grid-template-areas: "img1 img2 img3""texto1 texto2 texto3""img4 img5 img6""texto4 texto5 texto6""img7 img8 img9""texto7 texto8 texto9";
+        grid-gap: 20px;
+        padding: 20px;
+        margin-bottom: 20px;
     }
+
     .img {
-      width: 350px;
-      height: 300px;
-      background-size: cover;
+        width: 350px;
+        height: 300px;
+        background-size: cover;
     }
+
     .texto {
-      text-align: center;
+        text-align: center;
     }
-  }
-  @media only screen and (min-width: 480px) and (max-width: 768px) {
+}
+
+@media only screen and (min-width: 480px) and (max-width: 768px) {
     .productos {
-      height: 800px;
-      width: 97%;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 250px 50px 250px 50px 250px 50px 250px 50px 250px;
-      grid-template-areas: "img1 img2" "texto1 texto2" "img3 img4" "texto3 texto4" "img5 img6" "texto5 texto6" "img7 img8" "texto7 texto8" "img9 texto9";
-      grid-gap: 20px;
-      padding: 20px;
-      margin-bottom: 20px;
+        height: 800px;
+        width: 97%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 250px 50px 250px 50px 250px 50px 250px 50px 250px;
+        grid-template-areas: "img1 img2""texto1 texto2""img3 img4""texto3 texto4""img5 img6""texto5 texto6""img7 img8""texto7 texto8""img9 texto9";
+        grid-gap: 20px;
+        padding: 20px;
+        margin-bottom: 20px;
     }
-  }
-  .subir {
+}
+
+.subir {
     position: fixed;
     right: 40px;
     bottom: 40px;
     color: white;
-    background-color: rgb(227, 195, 227);
+    background-color: $color1;
     padding: 15px;
     font-size: 30px;
     border-radius: 50%;
-  }
-  
-  .subir:hover {
-    background-color: rgb(223, 152, 127);
-  }
-  
-  /* css contacto */
-  .contacto {
+}
+
+.subir:hover {
+    background-color: $color2;
+}
+
+/* css contacto */
+.contacto {
     padding: 10px;
     font-family: SourceSans;
-  }
-  
-  .contacto form {
-    height: 40%;
-    margin-bottom: 30px;
-  }
-  
-  .contacto label {
-    font-weight: bold;
-    font-size: 20px;
-  }
-  
-  .contacto h3 {
-    font-size: 40px;
-    font-family: SourceSans;
-    font-weight: bold;
-    color: rgb(238, 146, 80);
-  }
-  
-  /* css como comprar */
-  .comocomprar {
+
+
+    form {
+        height: 40%;
+        margin-bottom: 30px;
+    }
+
+
+    .label {
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 40px;
+        font-family: SourceSans;
+        font-weight: bold;
+        color: $color2;
+    }
+
+}
+
+/* css como comprar */
+.comocomprar {
     padding: 30px;
     font-family: SourceSans;
-  }
-  
-  .comocomprar h3 {
-    font-size: 40px;
-    font-weight: bold;
-  }
-  
-  .comocomprar p {
-    font-size: 20px;
-  }
-  
-  .pasos {
-    font-size: 20px;
-    padding: 20px;
-  }
-  
-  /* css sobre humo */
-  .nleft {
+
+    h3 {
+        font-size: 40px;
+        font-weight: bold;
+    }
+
+    p {
+        font-size: 20px;
+    }
+
+    .pasos {
+        font-size: 20px;
+        padding: 20px;
+    }
+}
+
+/* css sobre humo */
+.nleft {
     height: 300px;
     background-image: url(img/volume-g74e9da0a7_1280.jpg);
     background-size: cover;
     background-position: center;
     margin-top: 10px;
-  }
-  
-  h3 {
+}
+
+h3 {
     font-family: SourceSans;
     font-size: 40px;
     font-weight: bold;
     margin-bottom: 10px;
-    color: rgb(238, 146, 80);
-  }
-  
-  .nright p {
-    font-family: SourceSans;
-    text-align: center;
-    font-size: 20px;
-    text-align: justify;
-    width: 60%;
-    margin-left: 20px;
-  }
-  
-  .nright {
+    color: $color2;
     padding: 10px;
-  }
-  
-  .tips {
+}
+
+
+
+.nright {
+    padding: 10px;
+
+
+    p {
+        font-family: SourceSans;
+        text-align: center;
+        font-size: 20px;
+        text-align: justify;
+        width: 60%;
+        margin-left: 20px;
+    }
+}
+
+.tips {
     margin-top: 30px;
     text-align: center;
     font-family: SourceSans;
     margin-left: 10px;
-    margin-bottom: 40px;
-  }
-  
-  .tips h3 {
-    color: purple;
-  }
+    margin-bottom: 50px;
+    padding: 10px;
+    font-size: 20px;
+
+    li{
+        list-style-type: none;
+    }
+
+
+    h4 {
+        color: $color2;
+    }
+
+}
