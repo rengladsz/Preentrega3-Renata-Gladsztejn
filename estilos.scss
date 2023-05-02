@@ -9,18 +9,18 @@ $color2: rgb(239, 138, 101);
     color: $color2;
 }
 
-$redes: (
-    instagram: black,
+$redes: (instagram: black,
     mail: red,
     telefono: orange,
     direccion: purple,
 
-); 
+);
 
-@each $red, $color in $redes{
-.listafooter--#{$red}{
-    color: $color;
-}
+@each $red,
+$color in $redes {
+    .listafooter--#{$red} {
+        color: $color;
+    }
 }
 
 
@@ -39,6 +39,8 @@ $redes: (
     font-family: SourceSans;
     src: url(./fonts/SourceSansPro-Light.ttf);
 }
+
+// navbar
 
 .navbar {
     background-color: $color1;
@@ -112,6 +114,8 @@ body {
         margin-top: 50px;
     }
 }
+
+// productos
 
 .productos {
     height: auto;
@@ -295,11 +299,13 @@ body {
     padding: 15px;
     font-size: 30px;
     border-radius: 50%;
+
+    &:hover {
+        background-color: $color2;
+    }
 }
 
-.subir:hover {
-    background-color: $color2;
-}
+
 
 /* css contacto */
 .contacto {
@@ -353,7 +359,7 @@ body {
 }
 
 h3 {
-   @include texto-h3;
+    @include texto-h3;
 
 }
 
