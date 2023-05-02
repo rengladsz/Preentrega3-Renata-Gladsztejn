@@ -1,6 +1,29 @@
 $color1:rgb(226, 216, 246);
 $color2: rgb(239, 138, 101);
 
+@mixin texto-h3 {
+    font-family: SourceSans;
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: $color2;
+}
+
+$redes: (
+    instagram: black,
+    mail: red,
+    telefono: orange,
+    direccion: purple,
+
+); 
+
+@each $red, $color in $redes{
+.listafooter--#{$red}{
+    color: $color;
+}
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -143,10 +166,7 @@ body {
 .texto2 {
     grid-area: texto2;
     @extend .texto1;
-    // font-family: Verdana, Geneva, Tahoma, sans-serif;
-    // text-align: center;
-    // height: 60px;
-    // font-size: 16px;
+
 }
 
 .img3 {
@@ -243,10 +263,12 @@ body {
         width: 350px;
         height: 300px;
         background-size: cover;
+
     }
 
     .texto {
         text-align: center;
+
     }
 }
 
@@ -297,10 +319,7 @@ body {
     }
 
     h3 {
-        font-size: 40px;
-        font-family: SourceSans;
-        font-weight: bold;
-        color: $color2;
+        @include texto-h3;
     }
 
 }
@@ -311,8 +330,7 @@ body {
     font-family: SourceSans;
 
     h3 {
-        font-size: 40px;
-        font-weight: bold;
+        @include texto-h3;
     }
 
     p {
@@ -335,12 +353,8 @@ body {
 }
 
 h3 {
-    font-family: SourceSans;
-    font-size: 40px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: $color2;
-    padding: 10px;
+   @include texto-h3;
+
 }
 
 
@@ -368,7 +382,7 @@ h3 {
     padding: 10px;
     font-size: 20px;
 
-    li{
+    li {
         list-style-type: none;
     }
 
