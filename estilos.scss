@@ -9,19 +9,19 @@ $color2: rgb(239, 138, 101);
     color: $color2;
 }
 
-$redes: (instagram: black,
-    mail: red,
-    telefono: orange,
-    direccion: purple,
+// $redes: (instagram: black,
+//     mail: red,
+//     telefono: orange,
+//     direccion: purple,
 
-);
+// );
 
-@each $red,
-$color in $redes {
-    .listafooter--#{$red} {
-        color: $color;
-    }
-}
+// @each $red,
+// $color in $redes {
+//     .listafooter--#{$red} {
+//         color: $color;
+//     }
+// }
 
 
 * {
